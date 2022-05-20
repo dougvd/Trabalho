@@ -1,0 +1,26 @@
+package lista;
+
+public class Quadrado {
+
+	private float ld;
+	public Quadrado(float ld) 
+	{
+	setLado(ld);
+	}
+	public void setLado(float ld) 
+	{
+	this.ld= ld;
+	}
+	public float getld() 
+	{
+	return ld;
+	}
+	public float area() 
+	{
+	return this.ld* this.ld;
+	}public static void main(String[] args)
+	{
+	Quadrado q= new Quadrado(5);
+	System.out.println(q.area());}
+
+}
