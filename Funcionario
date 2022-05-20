@@ -1,0 +1,32 @@
+package lista;
+
+public class Funcionario {
+	private String name;
+	private float salr;
+	public Funcionario(String name, float salr) 
+	{
+	this.name= name;
+	this.salr = salr;
+	}
+	public String getName()
+	{
+	return name;
+	}
+	public float getSalario() 
+	{
+	return salr;
+	}
+	
+	public void aumentarSalario(float porcentagemDeAumento) 
+	{
+		this.salr+= this.salr* (porcentagemDeAumento)/100;}
+	
+	public static void main(String[] args) 
+	{
+	Funcionario Func= new Funcionario("Douglas", 4100);
+	System.out.println("Nome:"+ Func.getName() + ", Salário: "+ Func.getSalario());
+	
+	Func.aumentarSalario(52);
+	System.out.println("Nome: "+ Func.getName() + ", Salário: "+ Func.getSalario());
+  }
+}
