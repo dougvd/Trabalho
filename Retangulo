@@ -1,0 +1,51 @@
+package lista;
+import java.util.Scanner;
+
+public class Retangulo {
+
+	private float comp;
+	private float larg;
+	public Retangulo(float comprimento, float larg)
+	{
+	this.comp = comprimento;
+	this.larg = larg;
+	}
+	public void setcomp(float comp) 
+	{
+	this.comp= comp;
+	}
+	public void setLargura(float larg) 
+	{
+	this.larg= larg;
+	}
+	public float getcomp() 
+	{
+	return comp;
+	}
+	public float getlarg() 
+	{
+	return larg;
+	}
+	public float area() 
+	{
+	return getcomp() * getlarg();
+	}
+	public float perimetro()
+	{
+	return(2 * getcomp()) + (2 * getlarg()); 
+	}
+	
+	public static void main(String[] args){
+		
+	float comp, larg; Scanner digi = new Scanner(System.in);
+	System.out.println("digite o valor do comprimento: ");
+	comp= digi.nextFloat();
+	
+	System.out.println("digite o valor da largura: ");
+	larg= digi.nextFloat();
+
+	Retangulo r= new Retangulo(comp,larg);
+	System.out.println("A área é: "+ r.area());
+	System.out.println("O perimetro é: "+ r.perimetro());
+}
+}
