@@ -1,0 +1,30 @@
+package lista;
+
+public class Bola {
+		private String cor;
+		private int circ;
+		private String mat;
+
+		public Bola(String cor, int circ, String mat)
+		{
+		super();
+		this.cor= cor;
+		this.circ= circ;
+		this.mat= mat;}
+		public void trocaCor(String cor) 
+		{
+		this.cor= cor;
+		}
+		public String mostraCor() 
+		{
+		return this.cor;
+		}public static void main(String[] args) 
+		{
+			Bola b = new Bola("azul", 10, "couro");
+		System.out.println(b.mostraCor());
+		b.trocaCor("vermelha");
+		System.out.println(b.mostraCor());
+	}
+}
+
+
